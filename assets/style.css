@@ -1,0 +1,229 @@
+/* ============================================================
+   BizWiz Ltd - custom CSS (complements Tailwind Play CDN)
+   Palette mirrors the reference bakery template:
+     primary #EAA636  light #FDF5EB  dark #1E1916  secondary #545454
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* Smooth-scroll offset so sticky nav doesn't cover the heading */
+section[id], header[id] { scroll-margin-top: 90px; }
+
+/* ---------------- Navbar active link ---------------- */
+.nav-link {
+    position: relative;
+    color: #FDF5EB;
+    transition: color .25s ease;
+}
+.nav-link:hover { color: #EAA636; }
+.nav-link.active { color: #EAA636; }
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 6px;
+    height: 2px;
+    background: #EAA636;
+    border-radius: 2px;
+}
+
+.mobile-link {
+    color: #FDF5EB;
+    transition: color .2s ease, padding-left .2s ease;
+}
+.mobile-link:hover, .mobile-link.active {
+    color: #EAA636;
+    padding-left: 14px;
+}
+
+/* ---------------- Hero entrance animation ---------------- */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+}
+
+/* ---------------- Stats card ---------------- */
+.stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: transform .35s ease, box-shadow .35s ease;
+    box-shadow: 0 4px 18px -8px rgba(0,0,0,.08);
+}
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px -16px rgba(234,166,54,.35);
+}
+
+/* ---------------- About image collage backdrop ---------------- */
+.img-twice::before {
+    content: "";
+    position: absolute;
+    inset: 8% 18% 8% 18%;
+    background: #EAA636;
+    border: 18px solid #FDF5EB;
+    border-radius: 14px;
+    z-index: -1;
+}
+
+/* ---------------- Service card (mirrors .product-item hover from reference) ---------------- */
+.service-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem 1.75rem;
+    transition: background .4s ease, color .4s ease, transform .4s ease, box-shadow .4s ease;
+    box-shadow: 0 4px 18px -8px rgba(0,0,0,.06);
+    color: #545454;
+}
+.service-card p { color: inherit; opacity: .9; }
+.service-card:hover {
+    background: #EAA636;
+    color: #1E1916;
+    transform: translateY(-6px);
+    box-shadow: 0 22px 40px -18px rgba(234,166,54,.55);
+}
+.service-card:hover .service-icon {
+    background: #1E1916;
+    color: #EAA636;
+}
+.service-card:hover h3 { color: #1E1916; }
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #FDF5EB;
+    color: #EAA636;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: background .4s ease, color .4s ease;
+}
+
+/* ---------------- Why row ---------------- */
+.why-row {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.why-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #FDF5EB;
+    color: #EAA636;
+    font-size: 1.25rem;
+}
+
+/* ---------------- Testimonial card ---------------- */
+.testimonial-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem;
+    transition: transform .35s ease, box-shadow .35s ease;
+    box-shadow: 0 4px 22px -10px rgba(0,0,0,.08);
+    height: 100%;
+}
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 44px -18px rgba(234,166,54,.4);
+}
+
+/* ---------------- Contact info card ---------------- */
+.contact-info-card {
+    background: #FDF5EB;
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px -16px rgba(234,166,54,.4);
+}
+.contact-info-card p { color: #545454; font-size: .95rem; }
+.contact-info-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #fff;
+    color: #EAA636;
+    font-size: 1.1rem;
+    margin-bottom: .9rem;
+    box-shadow: 0 6px 18px -8px rgba(234,166,54,.45);
+}
+
+/* ---------------- Footer link ---------------- */
+.footer-link {
+    color: rgba(253,245,235,.7);
+    transition: color .25s ease, padding-left .25s ease;
+    display: inline-block;
+}
+.footer-link::before {
+    content: "\f105"; /* fa-chevron-right */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: .5rem;
+    color: #EAA636;
+    transition: margin-right .25s ease;
+}
+.footer-link:hover {
+    color: #EAA636;
+    padding-left: 4px;
+}
+
+/* ---------------- Pulsing ring (FAB + contact icon) ---------------- */
+.pulse-ring {
+    position: relative;
+}
+.pulse-ring::before,
+.pulse-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(37, 211, 102, .55);
+    z-index: -1;
+    animation: pulseRing 2.4s ease-out infinite;
+}
+.pulse-ring::after { animation-delay: 1.2s; }
+@keyframes pulseRing {
+    0%   { transform: scale(1);    opacity: .7; }
+    80%  { transform: scale(1.7);  opacity: 0;  }
+    100% { transform: scale(1.7);  opacity: 0;  }
+}
+
+/* ---------------- Reveal-on-scroll ---------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up, .reveal, .pulse-ring::before, .pulse-ring::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    html { scroll-behavior: auto; }
+}

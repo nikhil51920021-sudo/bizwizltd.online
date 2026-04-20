@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BizWiz Ltd Support - 24/7 available for all your queries. Chat with a real BizWiz expert on WhatsApp, anytime." />
+    <title>Support &middot; BizWiz Ltd &mdash; 24/7 on WhatsApp</title>
+
+    <!--
+        WHATSAPP CONTACT (support):
+        Number  : +91 99289 49465
+        Message : "I WANT ID"
+        Link    : https://wa.me/919928949465?text=I%20WANT%20ID
+    -->
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231E1916'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23EAA636'%3EB%3C/text%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary:   '#EAA636',
+                        secondary: '#545454',
+                        light:     '#FDF5EB',
+                        dark:      '#1E1916',
+                        whatsapp:  '#25D366'
+                    },
+                    fontFamily: {
+                        heading: ['Poppins', 'system-ui', 'sans-serif'],
+                        body:    ['Poppins', 'system-ui', 'sans-serif']
+                    },
+                    boxShadow: {
+                        soft: '0 10px 40px -10px rgba(0,0,0,.15)',
+                        glow: '0 20px 60px -15px rgba(37,211,102,.55)'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="assets/style.css" />
+    <style>
+        /* Soft animated background blobs for the hero */
+        @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+        .blob { animation: floatY 7s ease-in-out infinite; }
+        .blob.delay { animation-delay: 2.5s; }
+
+        /* Big WhatsApp logo entrance */
+        @keyframes pop {
+            0%   { opacity: 0; transform: scale(.6); }
+            70%  { opacity: 1; transform: scale(1.06); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .pop-in { animation: pop .9s cubic-bezier(.34,1.56,.64,1) forwards; }
+    </style>
+</head>
+
+<body class="font-body bg-light text-secondary antialiased">
+
+    <!-- ============================================================
+         HERO BANNER - 24/7 SUPPORT
+         ============================================================ -->
+    <header class="relative overflow-hidden text-light">
+        <!-- Photo background + readability overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="785276fb564cb137b9197cd77d8492a3.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0"></div>
+        </div>
+        <!-- Decorative blobs -->
+        <div class="blob absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-primary/15 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+        <div class="blob delay absolute -bottom-32 -left-24 w-[26rem] h-[26rem] bg-whatsapp/15 rounded-full blur-3xl pointer-events-none z-[1]"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
+
+            <!-- Live status pill -->
+            <div class="inline-flex items-center gap-2 bg-whatsapp/15 border border-whatsapp/40 text-whatsapp text-xs sm:text-sm font-semibold px-4 py-2 rounded-full mb-8">
+                <span class="relative flex w-2.5 h-2.5">
+                    <span class="absolute inline-flex w-full h-full rounded-full bg-whatsapp opacity-75 animate-ping"></span>
+                    <span class="relative inline-flex w-2.5 h-2.5 rounded-full bg-whatsapp"></span>
+                </span>
+                We&rsquo;re online right now
+            </div>
+
+            <!-- Big WhatsApp logo (clickable) -->
+            <a href="https://wa.me/919928949465?text=I%20WANT%20ID" target="_blank" rel="noopener"
+               aria-label="Chat with BizWiz on WhatsApp"
+               class="mx-auto mb-8 w-28 h-28 sm:w-36 sm:h-36 grid place-items-center rounded-[2rem] bg-whatsapp shadow-glow pulse-ring pop-in transition transform hover:scale-105 cursor-pointer">
+                <i class="fa-brands fa-whatsapp text-white text-6xl sm:text-8xl"></i>
+            </a>
+
+
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-10">
+                <span class="text-primary">24 / 7</span> Available<br/>
+                <span class="text-3xl">Get In Touch With Mahakal</span>
+            </h1>
+
+            <!-- Primary CTA -->
+            <a href="https://wa.me/919928949465?text=I%20WANT%20ID" target="_blank" rel="noopener"
+               class="group inline-flex items-center gap-2 bg-whatsapp hover:bg-white hover:text-whatsapp text-white font-semibold text-base sm:text-xl px-8 sm:px-10 py-4 sm:py-5 rounded-full shadow-glow transition transform hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
+                Get In Touch With Mahakal
+                <i class="fa-solid fa-arrow-right text-base translate-x-0 group-hover:translate-x-1 transition"></i>
+            </a>
+
+            <p class="text-light/50 text-sm mt-5">+91 99289 49465 &middot; replies typically within minutes</p>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         READY-WHEN-YOU-ARE CARD
+         ============================================================ -->
+    <section class="py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-dark text-light rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-soft">
+                <div class="text-center sm:text-left">
+                    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-1">Ready when you are.</h3>
+                    <p class="text-light/70 text-sm sm:text-base">Tap below and Mahakal Team will be with you in minutes.</p>
+                </div>
+                <a href="https://wa.me/919928949465?text=I%20WANT%20ID" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 bg-whatsapp hover:bg-primary hover:text-dark text-white font-semibold px-6 py-3.5 rounded-full transition shadow-soft">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MINIMAL FOOTER
+         ============================================================ -->
+    <footer class="bg-dark text-light/70 mt-4">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm">
+            <p>&copy; <span id="year">2026</span> &middot; Available 24/7</p>
+        </div>
+    </footer>
+
+    <script>
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

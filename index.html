@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BizWiz Ltd - Your 24/7 Business Wizards. A team of business experts helping founders and operators get more out of their business. Strategy, growth, operations, and mentorship." />
+    <meta name="keywords" content="BizWiz, business consulting, business wizard, growth consulting, 24/7 business help, business strategy" />
+    <title>BizWiz Ltd - Your 24/7 Business Wizards</title>
+
+    <!--
+        WHATSAPP CONTACT - update in ONE place if the number ever changes:
+        Number : +91 99289 49465
+        Link   : https://wa.me/919928949465?text=get%20me%20ID
+        Search the file for "wa.me/919928949465" to find every CTA.
+    -->
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231E1916'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23EAA636'%3EB%3C/text%3E%3C/svg%3E" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary:   '#EAA636',
+                        secondary: '#545454',
+                        light:     '#FDF5EB',
+                        dark:      '#1E1916',
+                        whatsapp:  '#25D366'
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'Georgia', 'serif'],
+                        body:    ['Roboto', 'system-ui', 'sans-serif']
+                    },
+                    boxShadow: {
+                        soft: '0 10px 40px -10px rgba(0,0,0,.15)'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="font-body bg-white text-secondary antialiased">
+
+    <!-- ============================================================
+         TOP BAR (hidden on small screens)
+         ============================================================ -->
+    <div class="hidden lg:block bg-dark text-light/80 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-11">
+            <ul class="flex items-center gap-5">
+                <li><a href="#home"          class="hover:text-primary transition">Home</a></li>
+                <li><a href="#about"         class="hover:text-primary transition">About</a></li>
+                <li><a href="#services"      class="hover:text-primary transition">Services</a></li>
+                <li><a href="#testimonials"  class="hover:text-primary transition">Testimonials</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <span class="text-light/60">Follow us:</span>
+                <a href="#" aria-label="Facebook"  class="w-8 h-8 grid place-items-center text-primary hover:bg-primary hover:text-dark transition rounded-full"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"   class="w-8 h-8 grid place-items-center text-primary hover:bg-primary hover:text-dark transition rounded-full"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"  class="w-8 h-8 grid place-items-center text-primary hover:bg-primary hover:text-dark transition rounded-full"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram" class="w-8 h-8 grid place-items-center text-primary hover:bg-primary hover:text-dark transition rounded-full"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         NAVBAR (sticky)
+         ============================================================ -->
+    <nav id="navbar" class="sticky top-0 z-40 bg-dark/95 backdrop-blur supports-[backdrop-filter]:bg-dark/80 text-light shadow-md">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+            <a href="#home" class="flex items-center gap-2 group">
+                <span class="font-heading text-3xl font-bold text-primary leading-none">BizWiz</span>
+                <span class="font-body text-xs uppercase tracking-[0.25em] text-light/70 mt-2 hidden sm:block">Ltd</span>
+            </a>
+
+            <ul id="nav-links" class="hidden lg:flex items-center gap-1">
+                <li><a href="#home"         class="nav-link px-4 py-2 text-sm uppercase tracking-wide">Home</a></li>
+                <li><a href="#about"        class="nav-link px-4 py-2 text-sm uppercase tracking-wide">About</a></li>
+                <li><a href="#services"     class="nav-link px-4 py-2 text-sm uppercase tracking-wide">Services</a></li>
+                <li><a href="#why"          class="nav-link px-4 py-2 text-sm uppercase tracking-wide">Why Us</a></li>
+                <li><a href="#testimonials" class="nav-link px-4 py-2 text-sm uppercase tracking-wide">Reviews</a></li>
+                <li><a href="#contact"      class="nav-link px-4 py-2 text-sm uppercase tracking-wide">Contact</a></li>
+            </ul>
+
+            <div class="hidden lg:flex items-center gap-3">
+                <div class="w-11 h-11 grid place-items-center rounded-full border border-light/30">
+                    <i class="fa-brands fa-whatsapp text-primary text-lg"></i>
+                </div>
+                <div class="leading-tight">
+                    <p class="text-primary text-xs uppercase tracking-wider">Available 24/7</p>
+                    <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener" class="text-light text-base font-medium hover:text-primary transition">+91 99289 49465</a>
+                </div>
+            </div>
+
+            <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden w-11 h-11 grid place-items-center rounded-md border border-light/30 text-light">
+                <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-light/10 bg-dark">
+            <ul class="px-6 py-4 flex flex-col gap-1">
+                <li><a href="#home"         class="mobile-link block py-3 px-2 border-b border-light/5">Home</a></li>
+                <li><a href="#about"        class="mobile-link block py-3 px-2 border-b border-light/5">About</a></li>
+                <li><a href="#services"     class="mobile-link block py-3 px-2 border-b border-light/5">Services</a></li>
+                <li><a href="#why"          class="mobile-link block py-3 px-2 border-b border-light/5">Why Us</a></li>
+                <li><a href="#testimonials" class="mobile-link block py-3 px-2 border-b border-light/5">Reviews</a></li>
+                <li><a href="#contact"      class="mobile-link block py-3 px-2 border-b border-light/5">Contact</a></li>
+                <li class="pt-3">
+                    <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 w-full bg-primary text-dark font-medium px-5 py-3 rounded-full">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <header id="home" class="relative isolate overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=70" alt="" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/75 to-dark/40"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-24 sm:py-32 lg:py-44">
+            <div class="max-w-3xl">
+                <p class="text-primary text-sm sm:text-base font-bold uppercase tracking-[0.25em] mb-4 fade-up">// 24 / 7 Business Wizards</p>
+                <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6 fade-up" style="animation-delay:.1s">
+                    Your Business,<br />
+                    <span class="text-primary">Levelled Up</span> by Wizards.
+                </h1>
+                <p class="text-light/80 text-base sm:text-lg lg:text-xl mb-10 max-w-2xl fade-up" style="animation-delay:.2s">
+                    BizWiz Ltd is a team of seasoned business experts available round the clock. We help founders, operators and growing teams squeeze every drop of value out of their business &mdash; strategy, growth, operations and mentorship, all in one tap.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 fade-up" style="animation-delay:.3s">
+                    <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-3 bg-primary text-dark font-semibold px-7 py-4 rounded-full hover:bg-light hover:scale-[1.02] transition shadow-soft">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+                    </a>
+                    <a href="#services"
+                       class="inline-flex items-center gap-2 border-2 border-light/40 text-white font-semibold px-7 py-4 rounded-full hover:bg-white hover:text-dark transition">
+                        Our Services <i class="fa-solid fa-arrow-down text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         STATS STRIP
+         ============================================================ -->
+    <section class="py-16 sm:py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div class="stat-card group">
+                    <i class="fa-solid fa-medal text-primary text-3xl sm:text-4xl mb-3"></i>
+                    <p class="text-secondary text-sm sm:text-base mb-2">Years Combined Expertise</p>
+                    <h3 class="font-heading text-3xl sm:text-5xl font-bold text-dark"><span class="counter" data-target="40">0</span>+</h3>
+                </div>
+                <div class="stat-card group">
+                    <i class="fa-solid fa-user-tie text-primary text-3xl sm:text-4xl mb-3"></i>
+                    <p class="text-secondary text-sm sm:text-base mb-2">Experts on the Team</p>
+                    <h3 class="font-heading text-3xl sm:text-5xl font-bold text-dark"><span class="counter" data-target="25">0</span>+</h3>
+                </div>
+                <div class="stat-card group">
+                    <i class="fa-solid fa-chart-line text-primary text-3xl sm:text-4xl mb-3"></i>
+                    <p class="text-secondary text-sm sm:text-base mb-2">Businesses Scaled</p>
+                    <h3 class="font-heading text-3xl sm:text-5xl font-bold text-dark"><span class="counter" data-target="350">0</span>+</h3>
+                </div>
+                <div class="stat-card group">
+                    <i class="fa-solid fa-headset text-primary text-3xl sm:text-4xl mb-3"></i>
+                    <p class="text-secondary text-sm sm:text-base mb-2">Support, Always On</p>
+                    <h3 class="font-heading text-3xl sm:text-5xl font-bold text-dark"><span class="counter" data-target="24">0</span>/7</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section id="about" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="img-twice relative grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=70" alt="Business team strategy session" class="rounded-xl shadow-soft w-full h-full object-cover aspect-[3/4]" />
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=70" alt="Business advisor on call" class="rounded-xl shadow-soft w-full h-full object-cover aspect-[3/4] self-end translate-y-8" />
+            </div>
+
+            <div>
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.25em] mb-3">// Who We Are</p>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                    A Team of Business Wizards Working <span class="text-primary">For You, 24&times;7</span>
+                </h2>
+                <p class="text-secondary text-base sm:text-lg mb-4">
+                    BizWiz Ltd is a collective of seasoned business experts &mdash; strategists, marketers, operators and finance pros &mdash; who pool decades of experience to help your business grow faster and smarter.
+                </p>
+                <p class="text-secondary text-base sm:text-lg mb-8">
+                    Whether you are a first-time founder finding your feet or an established operator chasing the next 10x, we plug in as your on-demand brain trust. No long retainers, no jargon &mdash; just clear thinking, available whenever you need it.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-3 mb-10">
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 grid place-items-center rounded-full bg-primary/15 text-primary"><i class="fa-solid fa-check"></i></span> Strategy &amp; Planning</div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 grid place-items-center rounded-full bg-primary/15 text-primary"><i class="fa-solid fa-check"></i></span> Growth &amp; Marketing</div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 grid place-items-center rounded-full bg-primary/15 text-primary"><i class="fa-solid fa-check"></i></span> Operations &amp; Ops</div>
+                    <div class="flex items-center gap-3"><span class="w-8 h-8 grid place-items-center rounded-full bg-primary/15 text-primary"><i class="fa-solid fa-check"></i></span> Branding &amp; Mentorship</div>
+                </div>
+
+                <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 bg-dark text-light font-semibold px-7 py-4 rounded-full hover:bg-primary hover:text-dark transition">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Talk to a Wizard
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+         ============================================================ -->
+    <section id="services" class="py-20 sm:py-28 bg-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.25em] mb-3">// What We Do</p>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-tight">
+                    Everything You Need to <span class="text-primary">Grow Your Biz</span>
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service Card Template repeated -->
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-chess-king"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">Business Strategy</h3>
+                    <p>Sharpen your vision with battle-tested frameworks. We help you decide what to do next &mdash; and what to stop doing.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">Growth Marketing</h3>
+                    <p>Acquisition, retention, content, ads, SEO &mdash; a full-stack growth engine tailored to your stage and budget.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">Operations Optimisation</h3>
+                    <p>Cut waste, speed up delivery, and build SOPs that scale. Run a tighter ship without burning out the team.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">Brand Positioning</h3>
+                    <p>Stand out in a noisy market. We craft messaging and identity that makes the right customers say &ldquo;that&rsquo;s for me&rdquo;.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">Financial Advisory</h3>
+                    <p>Pricing, unit economics, fundraising readiness, dashboards &mdash; clarity on the numbers that actually move the needle.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="font-heading text-2xl font-bold mb-3">24&times;7 Mentorship</h3>
+                    <p>Stuck at midnight? Tap WhatsApp. Real experts on call, every day, ready to unblock you whenever you need it.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WHY CHOOSE US
+         ============================================================ -->
+    <section id="why" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.25em] mb-3">// Why BizWiz</p>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                    Real Experts. Real Outcomes. <span class="text-primary">Real Time.</span>
+                </h2>
+                <p class="text-secondary text-base sm:text-lg mb-10">
+                    Most consultants disappear after the deck. We stay in the trenches with you &mdash; iterating, advising and shipping until the numbers move.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="why-row">
+                        <div class="why-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4 class="font-heading text-xl font-bold text-dark mb-1">24&times;7 Availability</h4>
+                            <p>WhatsApp us anytime. Average first reply in under 15 minutes, day or night.</p>
+                        </div>
+                    </div>
+                    <div class="why-row">
+                        <div class="why-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <div>
+                            <h4 class="font-heading text-xl font-bold text-dark mb-1">Senior Expert Team</h4>
+                            <p>You get founders, ex-operators and category specialists &mdash; not junior account managers.</p>
+                        </div>
+                    </div>
+                    <div class="why-row">
+                        <div class="why-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <div>
+                            <h4 class="font-heading text-xl font-bold text-dark mb-1">Proven Playbooks</h4>
+                            <p>Hundreds of engagements distilled into frameworks you can use again and again.</p>
+                        </div>
+                    </div>
+                    <div class="why-row">
+                        <div class="why-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                        <div>
+                            <h4 class="font-heading text-xl font-bold text-dark mb-1">Personalised Plans</h4>
+                            <p>No copy-paste advice. Every plan is built from your stage, market and goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 relative">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=70" alt="Business experts collaborating" class="rounded-xl shadow-soft w-full h-full object-cover aspect-[4/5]" />
+                <div class="hidden sm:block absolute -bottom-6 -left-6 bg-primary text-dark p-6 rounded-xl shadow-soft max-w-[230px]">
+                    <i class="fa-solid fa-quote-left text-2xl mb-2"></i>
+                    <p class="font-heading font-bold leading-snug">&ldquo;A wizard is never late, nor early. They arrive precisely when you need them.&rdquo;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WIDE CTA BANNER
+         ============================================================ -->
+    <section class="py-14 bg-primary">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6 items-center">
+            <div>
+                <p class="text-dark/70 text-sm font-bold uppercase tracking-[0.25em] mb-2">// Ready when you are</p>
+                <h3 class="font-heading text-3xl sm:text-4xl font-bold text-dark leading-tight">Talk to a Wizard Now &mdash; First Chat is Free.</h3>
+            </div>
+            <div class="md:text-right">
+                <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 bg-dark text-light font-semibold px-7 py-4 rounded-full hover:bg-white hover:text-dark transition shadow-soft">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Start Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+         ============================================================ -->
+    <section id="testimonials" class="py-20 sm:py-28 bg-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.25em] mb-3">// Client Reviews</p>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-tight">
+                    Founders &amp; Operators <span class="text-primary">Trust BizWiz</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="testimonial-card">
+                    <div class="flex text-primary mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        &ldquo;BizWiz feels like having a co-founder on speed dial. Their growth playbook helped us 3x our pipeline in two quarters &mdash; and they actually pick up the phone at 11pm.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-4 pt-5 border-t border-secondary/10">
+                        <img src="https://i.pravatar.cc/120?img=12" alt="Anshul Shukla" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary/30 p-0.5" />
+                        <div>
+                            <h5 class="font-heading text-lg font-bold text-dark">Anshul Shukla</h5>
+                            <span class="text-sm text-secondary">Founder, D2C Startup</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="flex text-primary mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        &ldquo;Operations were a mess before BizWiz mapped our SOPs. We cut delivery time by 40% and the team finally has its weekends back. Worth every rupee.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-4 pt-5 border-t border-secondary/10">
+                        <img src="https://i.pravatar.cc/120?img=33" alt="Nikhil Narayan" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary/30 p-0.5" />
+                        <div>
+                            <h5 class="font-heading text-lg font-bold text-dark">Nikhil Narayan</h5>
+                            <span class="text-sm text-secondary">Operations Lead, Logistics Co.</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="flex text-primary mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-secondary mb-6 leading-relaxed">
+                        &ldquo;The mentorship is the real magic. Whenever I&rsquo;m stuck on a hard call, I ping the BizWiz team and walk away with clarity. They&rsquo;re my unfair advantage.&rdquo;
+                    </p>
+                    <div class="flex items-center gap-4 pt-5 border-t border-secondary/10">
+                        <img src="https://i.pravatar.cc/120?img=52" alt="Rajhans Mishra" class="w-14 h-14 rounded-full object-cover ring-2 ring-primary/30 p-0.5" />
+                        <div>
+                            <h5 class="font-heading text-lg font-bold text-dark">Rajhans Mishra</h5>
+                            <span class="text-sm text-secondary">Entrepreneur</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.25em] mb-3">// Get in Touch</p>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-dark leading-tight">
+                    One Tap Away &mdash; <span class="text-primary">Day or Night</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Info column -->
+                <div class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <h5 class="font-heading text-lg font-bold text-dark mb-1">Call / WhatsApp</h5>
+                            <p><a href="tel:+919928949465" class="hover:text-primary">+91 99289 49465</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <h5 class="font-heading text-lg font-bold text-dark mb-1">Hours</h5>
+                            <p>24 / 7 / 365<br />We never sleep on you.</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h5 class="font-heading text-lg font-bold text-dark mb-1">Reply Time</h5>
+                            <p>Under 15 minutes,<br />day or night.</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon"><i class="fa-solid fa-globe"></i></div>
+                            <h5 class="font-heading text-lg font-bold text-dark mb-1">Where We Work</h5>
+                            <p>Fully remote &mdash; serving founders worldwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-light rounded-xl p-6 sm:p-8 shadow-soft">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 grid place-items-center rounded-xl bg-white text-primary text-xl shadow-soft">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading text-xl font-bold text-dark mb-2">Why we prefer WhatsApp</h4>
+                                <p class="text-secondary">It&rsquo;s the fastest way to reach a real BizWiz expert. No forms, no inbox black holes &mdash; just a quick chat, a clear plan, and an instant next step.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp CTA Card -->
+                <div class="bg-dark text-light rounded-2xl p-8 sm:p-12 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-12 -left-8 w-40 h-40 bg-whatsapp/20 rounded-full blur-3xl"></div>
+
+                    <div class="relative">
+                        <div class="w-20 h-20 bg-whatsapp grid place-items-center rounded-full mb-6 shadow-soft pulse-ring">
+                            <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
+                            Tap to Start a Chat &mdash; <span class="text-primary">We Reply in Minutes</span>
+                        </h3>
+                        <p class="text-light/70 text-base sm:text-lg mb-8">
+                            Skip the forms. Skip the wait. Drop us a WhatsApp message and a real BizWiz expert will get back to you, usually within 15 minutes &mdash; even at 3am.
+                        </p>
+                        <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center gap-3 bg-whatsapp hover:bg-white hover:text-whatsapp text-white font-semibold px-7 py-4 rounded-full transition shadow-soft text-lg w-full sm:w-auto">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> Chat Now on WhatsApp
+                        </a>
+                        <p class="text-light/50 text-sm mt-4">+91 99289 49465 &middot; available 24 / 7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-dark text-light/80">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div>
+                <a href="#home" class="flex items-center gap-2 mb-5">
+                    <span class="font-heading text-3xl font-bold text-primary leading-none">BizWiz</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-light/70 mt-2">Ltd</span>
+                </a>
+                <p class="text-light/60 mb-5 leading-relaxed">
+                    Your 24&times;7 business wizards. A team of experts helping founders and operators get more out of every move.
+                </p>
+                <div class="flex gap-2">
+                    <a href="#" aria-label="Facebook"  class="w-10 h-10 grid place-items-center rounded-full border border-light/30 hover:bg-primary hover:border-primary hover:text-dark transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"   class="w-10 h-10 grid place-items-center rounded-full border border-light/30 hover:bg-primary hover:border-primary hover:text-dark transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"  class="w-10 h-10 grid place-items-center rounded-full border border-light/30 hover:bg-primary hover:border-primary hover:text-dark transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram" class="w-10 h-10 grid place-items-center rounded-full border border-light/30 hover:bg-primary hover:border-primary hover:text-dark transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-light mb-5">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home"     class="footer-link">Home</a></li>
+                    <li><a href="#about"    class="footer-link">About Us</a></li>
+                    <li><a href="#services" class="footer-link">Services</a></li>
+                    <li><a href="#why"      class="footer-link">Why BizWiz</a></li>
+                    <li><a href="#contact"  class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-light mb-5">Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="#services" class="footer-link">Business Strategy</a></li>
+                    <li><a href="#services" class="footer-link">Growth Marketing</a></li>
+                    <li><a href="#services" class="footer-link">Operations Optimisation</a></li>
+                    <li><a href="#services" class="footer-link">Brand Positioning</a></li>
+                    <li><a href="#services" class="footer-link">24&times;7 Mentorship</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading text-lg font-bold text-light mb-5">Get in Touch</h4>
+                <p class="mb-3 flex items-start gap-3"><i class="fa-solid fa-phone text-primary mt-1"></i><a href="tel:+919928949465" class="hover:text-primary">+91 99289 49465</a></p>
+                <p class="mb-3 flex items-start gap-3"><i class="fa-solid fa-clock text-primary mt-1"></i><span>Available 24 &times; 7 &times; 365</span></p>
+                <p class="mb-5 flex items-start gap-3"><i class="fa-solid fa-bolt text-primary mt-1"></i><span>Avg. reply in under 15 minutes</span></p>
+                <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-whatsapp text-white px-5 py-3 rounded-full hover:bg-primary hover:text-dark transition">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-light/10">
+            <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-light/60">
+                <p>&copy; <span id="year">2026</span> <a href="#home" class="text-primary hover:underline">BizWiz Ltd</a>. All rights reserved.</p>
+                <p>Crafted with care &mdash; available 24 / 7.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         FLOATING WHATSAPP FAB
+         ============================================================ -->
+    <a href="https://wa.me/919928949465?text=get%20me%20ID" target="_blank" rel="noopener"
+       aria-label="Chat with BizWiz on WhatsApp"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 bg-whatsapp grid place-items-center rounded-full shadow-soft pulse-ring hover:scale-110 transition">
+        <i class="fa-brands fa-whatsapp text-white text-3xl sm:text-4xl"></i>
+    </a>
+
+    <!-- ============================================================
+         BACK TO TOP
+         ============================================================ -->
+    <button id="back-to-top" type="button" aria-label="Back to top"
+            class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-dark text-primary grid place-items-center rounded-full shadow-soft opacity-0 pointer-events-none transition hover:bg-primary hover:text-dark">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>
