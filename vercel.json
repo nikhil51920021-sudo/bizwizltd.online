@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/support",
+      "destination": "/support.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
